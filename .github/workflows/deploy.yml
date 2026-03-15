@@ -1,21 +1,18 @@
 name: Deploy Portfolio to S3
 
-# Trigger on push to main branch
 on:
   push:
     branches:
-      - main  # Change if your default branch is different
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repo
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Configure AWS Credentials
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -23,7 +20,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-2
 
-      # Step 3: Sync local repo to S3 bucket
       - name: Deploy to S3
         run: |
           aws s3 sync . s3://shariqua-portfolio --delete --exclude ".git/*" --exclude ".github/*"

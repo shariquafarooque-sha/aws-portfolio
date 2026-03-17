@@ -1,225 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Shariqua Patel Farooque</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
 
-<title>Portfolio | Shariqua Patel Farooque</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-
 <body>
 
-
-<!-- HERO SECTION -->
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>Hello, I'm <span class="highlight">Shariqua Patel Farooque</span></h1>
-
-<div class="hero-divider"></div>
-
-<h2>Aspiring AWS Cloud & DevOps Engineer</h2>
-
-<p class="highlight tagline">Design • Automate • Deploy • Scale</p>
-
-<div class="hero-buttons">
-
-<a href="assets/Shariqua_Patel_CV.pdf" class="btn" target="_blank">
-Download CV
-</a>
-
-<a href="#projects" class="btn-secondary">
-Projects
-</a>
-
-<a href="#contact" class="btn-secondary">
-Contact
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT SECTION -->
-
-<section class="section">
-
-<h2 class="section-title">About Me</h2>
-
-<p class="about-text">
-
-I am passionate about cloud technologies and DevOps practices.
-Currently building hands-on projects with AWS services, CI/CD pipelines, and automation tools to develop real-world cloud engineering skills.
-
-</p>
-
-</section>
-
-
-<!-- PROJECT SECTION -->
-
-<section id="projects" class="section">
-
-<h2 class="section-title">Projects</h2>
-
-<div class="projects-grid">
-
-
-<!-- Project 1 -->
-<div class="project-card">
-
-<h3>AWS Static Website Hosting</h3>
-
-<p>
-Portfolio website hosted on Amazon S3 with static website hosting, public access, and logging enabled.
-</p>
-
-<div class="project-images">
-
-<img src="assets/screenshots/s3_bucket/bucket_properties.png" alt="Bucket Properties" onclick="openImage(this.src)">
-
-<img src="assets/screenshots/s3_bucket/bucket_policy.png" alt="Bucket Policy" onclick="openImage(this.src)">
-
-<img src="assets/screenshots/s3_bucket/bucket_logging.png" alt="Bucket Logging" onclick="openImage(this.src)">
-
-</div>
-
-<a href="http://shariqua-portfolio.s3-website.eu-west-2.amazonaws.com" target="_blank">
-View S3 Site
-</a>
-
-</div>
-
-
-<!-- Project 2 -->
-<div class="project-card">
-
-<h3>Access Logging</h3>
-
-<p>
-Server access logs capture visitor requests for monitoring and analysis.
-</p>
-
-<div class="project-images">
-
-<img src="assets/screenshots/cloudfront/general_tab.png" onclick="openImage(this.src)">
-
-<img src="assets/screenshots/cloudfront/behaviors_tab.png" onclick="openImage(this.src)">
-
-</div>
-
-</div>
-
-
-<!-- Project 3 -->
-<div class="project-card">
-
-<h3>CloudFront CDN</h3>
-
-<p>
-CloudFront distribution configured for HTTPS and fast global content delivery.
-</p>
-
-<div class="project-images">
-
-<img src="assets/screenshots/cloudfront/general_tab.png">
-
-<img src="assets/screenshots/cloudfront/behaviors_tab.png">
-
-</div>
-
-<a href="https://d1pnevotalkm9w.cloudfront.net" target="_blank">
-View CloudFront Site
-</a>
-
-</div>
-
-
-<!-- Project 4 -->
-<div class="project-card">
-
-<h3>Website Preview</h3>
-
-<p>
-Homepage preview from S3 and CloudFront URLs.
-</p>
-
-<div class="project-images">
-
-<img src="assets/screenshots/website/s3_url_homepage.png">
-
-<img src="assets/screenshots/website/cloudfront_url_homepage.png">
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="section">
-
-<h2 class="section-title">Contact</h2>
-
-<p>You can reach me through the following platforms</p>
-
-<div class="social-links">
-
-<a href="https://github.com/shariquafarooque-sha" target="_blank">
-<img src="assets/icons/github.svg" class="icon">
-</a>
-
-<a href="https://linkedin.com/in/shariqua-patel-28464a263" target="_blank">
-<img src="assets/icons/linkedin.svg" class="icon">
-</a>
-
-<a href="mailto:shariquafarooque@gmail.com">
-<img src="assets/icons/email.svg" class="icon">
-</a>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<p>© 2026 Shariqua Patel Farooque | AWS DevOps Portfolio</p>
-
-</footer>
-<!-- IMAGE VIEWER -->
-<div id="imageViewer" class="image-viewer" onclick="closeImage()">
-  <img id="viewerImg">
-</div>
-
-<script>
-
-function openImage(src){
-  document.getElementById("imageViewer").style.display="flex";
-  document.getElementById("viewerImg").src = src;
-}
-
-function closeImage(){
-  document.getElementById("imageViewer").style.display="none";
-}
-
-</script>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">Shariqua<span>.</span></a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+
+    <div class="container hero-wrapper">
+      <div class="hero-monogram">SP</div>
+
+      <div class="hero-content">
+        <p class="hero-name">SHARIQUA PATEL FAROOQUE</p>
+        <div class="hero-line"></div>
+
+        <h1>DevOps & Cloud<br>Enthusiast</h1>
+
+        <p class="hero-tagline">DESIGN • AUTOMATE • DEPLOY • SCALE</p>
+
+        <p class="hero-description">
+          Aspiring AWS Cloud & DevOps Engineer building hands-on projects in AWS,
+          Linux, Git, CI/CD, Docker, Jenkins, Kubernetes, monitoring, and automation.
+          I enjoy transforming technical learning into practical portfolio work with a
+          clean, elegant, and professional presentation.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="assets/Shariqua_Patel_CV.pdf" class="btn btn-primary" target="_blank">
+            Download CV
+          </a>
+
+          <a href="#projects" class="btn btn-secondary">
+            View Projects
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="section-label">About Me</p>
+        <h2>Elegant portfolio. Real learning. Practical cloud journey.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Who I Am</h3>
+          <p>
+            I am passionate about cloud technologies and DevOps practices. My focus is
+            on learning by doing and building real projects that strengthen my practical
+            skills in AWS, automation, Linux, CI/CD, and infrastructure concepts.
+          </p>
+          <p>
+            I am currently creating a professional cloud portfolio that reflects both my
+            technical growth and my ability to present projects in a clean, structured,
+            and polished way.
+          </p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-box">
+            <h4>9</h4>
+            <p>Core Learning Repositories</p>
+          </div>
+          <div class="stat-box">
+            <h4>AWS</h4>
+            <p>Cloud Hands-on Projects</p>
+          </div>
+          <div class="stat-box">
+            <h4>CI/CD</h4>
+            <p>Deployment Workflow Practice</p>
+          </div>
+          <div class="stat-box">
+            <h4>DevOps</h4>
+            <p>Growing Practical Foundation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARNING JOURNEY -->
+  <section id="journey" class="section">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="section-label">Learning Journey</p>
+        <h2>My complete repository-based roadmap</h2>
+      </div>
+
+      <div class="journey-grid">
+        <div class="journey-card">
+          <span class="repo-number">01</span>
+          <h3>DevOps-Basics</h3>
+          <p>SDLC, Agile, DevOps concepts, networking basics, Linux fundamentals, first commands, and directory structure.</p>
+        </div>
+
+        <div class="journey-card">
+          <span class="repo-number">02</span>
+          <h3>Git-GitHub-Workflow</h3>
+          <p>Version control, Git commands, GitHub workflow, branching, merging, pull requests, and deployment practices.</p>
+        </div>
+
+        <div class="journey-card">
+          <span class="repo-number">03</span>
+          <h3>Linux-HandsOn</h3>
+          <p>Linux commands, sudo, networking, package management, users, permissions, shell scripting, cron jobs, and task automation.</p>
+        </div>
+
+        <div class="journey-card">
+          <span class="repo-number">04</span>
+          <h3>AWS-Cloud</h3>
+          <p>Cloud concepts, AWS setup, IAM, EC2, S3, VPC, Lambda, SQS/SNS, CloudWatch, and CloudFormation.</p>
+        </div>
+
+        <div class="journey-card">
+          <span class="repo-number">05</span>
+          <h3>Docker-Containerization</h3>
+          <p>Docker, Dockerfile, Docker Compose, containers vs VMs, and hands-on containerization examples.</p>
+        </div>
+
+        <div class="journey-card">
+          <span class="repo-number">06</span>
+          <h3>CI-CD-Jenkins</h3>
+          <p>Jenkins, Maven, CI/CD pipelines, GitHub and Docker integration, testing workflows, and deployment basics.</p>
+        </div>
+
+        <div class="journey-card">
+          <span class="repo-number">07</span>
+          <h3>Monitoring-DevOps</h3>
+          <p>Prometheus, Grafana, monitoring dashboards, alerts, observability concepts, and best practices.</p>
+        </div>
+
+        <div class="journey-card">
+          <span class="repo-number">08</span>
+          <h3>Kubernetes</h3>
+          <p>Kubernetes setup, pods, deployments, YAML, services, microservices architecture, and cloud Kubernetes basics.</p>
+        </div>
+
+        <div class="journey-card">
+          <span class="repo-number">09</span>
+          <h3>Prompt-Engineering</h3>
+          <p>Prompt engineering concepts, hands-on experiments, reusable prompt templates, and best practices for AI workflows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="section-label">Featured Projects</p>
+        <h2>Cloud portfolio highlights</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-badge">AWS • S3</span>
+            <h3>AWS Static Website Hosting</h3>
+            <p>
+              Portfolio website hosted on Amazon S3 with static website hosting,
+              public access configuration, and cloud portfolio deployment practice.
+            </p>
+          </div>
+
+          <div class="project-images">
+            <img src="assets/screenshots/s3_bucket/bucket_properties.png" alt="Bucket Properties" onclick="openImage(this.src)">
+            <img src="assets/screenshots/s3_bucket/bucket_policy.png" alt="Bucket Policy" onclick="openImage(this.src)">
+            <img src="assets/screenshots/s3_bucket/bucket_logging.png" alt="Bucket Logging" onclick="openImage(this.src)">
+          </div>
+
+          <div class="project-links">
+            <a href="http://shariqua-portfolio.s3-website.eu-west-2.amazonaws.com" target="_blank" class="btn btn-small">
+              View S3 Site
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-badge">Logs • Monitoring</span>
+            <h3>Access Logging Setup</h3>
+            <p>
+              Server access logging setup for request visibility, monitoring support,
+              and analysis of traffic behavior across the hosting workflow.
+            </p>
+          </div>
+
+          <div class="project-images">
+            <img src="assets/screenshots/cloudfront/general_tab.png" alt="CloudFront General Tab" onclick="openImage(this.src)">
+            <img src="assets/screenshots/cloudfront/behaviors_tab.png" alt="CloudFront Behaviors Tab" onclick="openImage(this.src)">
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-badge">CDN • HTTPS</span>
+            <h3>CloudFront CDN Delivery</h3>
+            <p>
+              CloudFront distribution configured for faster global delivery,
+              improved content access, and secure website delivery workflow.
+            </p>
+          </div>
+
+          <div class="project-images">
+            <img src="assets/screenshots/cloudfront/general_tab.png" alt="CloudFront Overview" onclick="openImage(this.src)">
+            <img src="assets/screenshots/cloudfront/behaviors_tab.png" alt="CloudFront Behaviors" onclick="openImage(this.src)">
+          </div>
+
+          <div class="project-links">
+            <a href="https://d1pnevotalkm9w.cloudfront.net" target="_blank" class="btn btn-small">
+              View CloudFront Site
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-badge">Preview • Deployment</span>
+            <h3>Website Preview Comparison</h3>
+            <p>
+              Homepage preview comparison between direct S3 website hosting and
+              CloudFront delivery URL to observe deployment outcome.
+            </p>
+          </div>
+
+          <div class="project-images">
+            <img src="assets/screenshots/website/s3_url_homepage.png" alt="S3 Homepage Preview" onclick="openImage(this.src)">
+            <img src="assets/screenshots/website/cloudfront_url_homepage.png" alt="CloudFront Homepage Preview" onclick="openImage(this.src)">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="section-label">Contact</p>
+        <h2>Let’s connect</h2>
+      </div>
+
+      <div class="contact-card">
+        <p class="contact-text">
+          You can reach me through the following platforms for portfolio viewing,
+          networking, and professional connection.
+        </p>
+
+        <div class="social-links">
+          <a href="https://github.com/shariquafarooque-sha" target="_blank" aria-label="GitHub">
+            <img src="assets/icons/github.svg" class="icon" alt="GitHub">
+          </a>
+
+          <a href="https://linkedin.com/in/shariqua-patel-28464a263" target="_blank" aria-label="LinkedIn">
+            <img src="assets/icons/linkedin.svg" class="icon" alt="LinkedIn">
+          </a>
+
+          <a href="mailto:shariquafarooque@gmail.com" aria-label="Email">
+            <img src="assets/icons/email.svg" class="icon" alt="Email">
+          </a>
+        </div>
+
+        <div class="contact-links">
+          <p><i class="fa-solid fa-envelope"></i> shariquafarooque@gmail.com</p>
+          <p><i class="fa-brands fa-github"></i> github.com/shariquafarooque-sha</p>
+          <p><i class="fa-brands fa-linkedin"></i> linkedin.com/in/shariqua-patel-28464a263</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Shariqua Patel Farooque | AWS DevOps Portfolio</p>
+  </footer>
+
+  <!-- IMAGE VIEWER -->
+  <div id="imageViewer" class="image-viewer" onclick="closeImage()">
+    <img id="viewerImg" alt="Preview">
+  </div>
+
+  <script>
+    function openImage(src) {
+      document.getElementById("imageViewer").style.display = "flex";
+      document.getElementById("viewerImg").src = src;
+    }
+
+    function closeImage() {
+      document.getElementById("imageViewer").style.display = "none";
+    }
+  </script>
 </body>
 </html>

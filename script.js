@@ -27,11 +27,6 @@ const galleries = {
       src: "assets/screenshots/s3_bucket/bucket_logging.png",
       title: "Bucket Logging",
       desc: "Logging-related configuration for S3 bucket observation."
-    },
-    {
-      src: "assets/screenshots/s3_bucket/s3_logs.png",
-      title: "S3 Logs Screenshot",
-      desc: "Screenshot related to stored S3 access log content or log bucket view."
     }
   ],
 
@@ -48,6 +43,7 @@ const galleries = {
     }
   ],
 
+  // ✅ FIXED: separate s3_logs section
   s3_logs: [
     {
       src: "assets/screenshots/s3_logs/logs_list.png",

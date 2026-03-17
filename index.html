@@ -3,31 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Shariqua Patel Farooque</title>
+  <title>Shariqua Patel Farooque | DevOps & Cloud</title>
 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
+  <!-- Floating background waves -->
+  <div class="wave wave-1"></div>
+  <div class="wave wave-2"></div>
+  <div class="wave wave-3"></div>
+
   <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <a href="#home" class="logo">Shariqua<span>.</span></a>
+  
 
       <nav>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#journey">Journey</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#blogs">Blogs</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -37,11 +39,6 @@
   <!-- HERO -->
   <section id="home" class="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-glow hero-glow-1"></div>
-    <div class="hero-glow hero-glow-2"></div>
-
-    <div class="container hero-wrapper">
-      <div class="hero-monogram">SP</div>
 
       <div class="hero-content">
         <p class="hero-name">SHARIQUA PATEL FAROOQUE</p>
@@ -52,24 +49,15 @@
         <p class="hero-tagline">DESIGN • AUTOMATE • DEPLOY • SCALE</p>
 
         <p class="hero-description">
-          Aspiring AWS Cloud & DevOps Engineer building hands-on projects in AWS,
+          Aspiring AWS Cloud & DevOps Engineer building hands-on work in AWS,
           Linux, Git, CI/CD, Docker, Jenkins, Kubernetes, monitoring, and automation.
-          I enjoy transforming technical learning into practical portfolio work with a
-          clean, elegant, and professional presentation.
+          I enjoy turning technical learning into practical, polished, real-world work.
         </p>
 
         <div class="hero-buttons">
-          <a href="assets/Shariqua_Patel_CV.pdf" class="btn btn-primary" target="_blank">
-            Download CV
-          </a>
-
-          <a href="#projects" class="btn btn-secondary">
-            View Projects
-          </a>
-
-          <a href="#contact" class="btn btn-secondary">
-            Contact
-          </a>
+          <a href="assets/Shariqua_Patel_CV.pdf" class="btn btn-primary" target="_blank">Download CV</a>
+          <a href="#projects" class="btn btn-secondary">View Work</a>
+          <a href="#contact" class="btn btn-secondary">Contact</a>
         </div>
       </div>
     </div>
@@ -80,7 +68,7 @@
     <div class="container">
       <div class="section-heading center">
         <p class="section-label">About Me</p>
-        <h2>Elegant portfolio. Real learning. Practical cloud journey.</h2>
+        <h2>Built through curiosity, consistency, and hands-on practice.</h2>
       </div>
 
       <div class="about-grid">
@@ -88,191 +76,276 @@
           <h3>Who I Am</h3>
           <p>
             I am passionate about cloud technologies and DevOps practices. My focus is
-            on learning by doing and building real projects that strengthen my practical
+            on learning by doing and building meaningful work that strengthens my practical
             skills in AWS, automation, Linux, CI/CD, and infrastructure concepts.
           </p>
           <p>
-            I am currently creating a professional cloud portfolio that reflects both my
-            technical growth and my ability to present projects in a clean, structured,
-            and polished way.
+            I am creating a clean and modern personal website that reflects both my
+            technical growth and my ability to present work in a structured and professional way.
           </p>
         </div>
 
         <div class="about-stats">
           <div class="stat-box">
-            <h4>9</h4>
-            <p>Core Learning Repositories</p>
-          </div>
-          <div class="stat-box">
             <h4>AWS</h4>
-            <p>Cloud Hands-on Projects</p>
+            <p>Cloud projects and deployment practice</p>
           </div>
           <div class="stat-box">
             <h4>CI/CD</h4>
-            <p>Deployment Workflow Practice</p>
+            <p>Automation workflow and release basics</p>
           </div>
           <div class="stat-box">
-            <h4>DevOps</h4>
-            <p>Growing Practical Foundation</p>
+            <h4>Linux</h4>
+            <p>Command line, permissions, scripting, and tasks</p>
+          </div>
+          <div class="stat-box">
+            <h4>Growth</h4>
+            <p>Continuous learning across DevOps tools and platforms</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LEARNING JOURNEY -->
+  <!-- JOURNEY -->
   <section id="journey" class="section">
     <div class="container">
       <div class="section-heading center">
         <p class="section-label">Learning Journey</p>
-        <h2>My complete repository-based roadmap</h2>
+        <h2>From fundamentals to cloud, automation, and modern delivery.</h2>
       </div>
 
       <div class="journey-grid">
         <div class="journey-card">
-          <span class="repo-number">01</span>
-          <h3>DevOps-Basics</h3>
+          <span class="journey-step">01</span>
+          <h3>DevOps Foundations</h3>
           <p>SDLC, Agile, DevOps concepts, networking basics, Linux fundamentals, first commands, and directory structure.</p>
         </div>
 
         <div class="journey-card">
-          <span class="repo-number">02</span>
-          <h3>Git-GitHub-Workflow</h3>
-          <p>Version control, Git commands, GitHub workflow, branching, merging, pull requests, and deployment practices.</p>
+          <span class="journey-step">02</span>
+          <h3>Git & Collaboration</h3>
+          <p>Version control, Git commands, branching, merging, pull requests, GitHub workflow, and deployment practices.</p>
         </div>
 
         <div class="journey-card">
-          <span class="repo-number">03</span>
-          <h3>Linux-HandsOn</h3>
+          <span class="journey-step">03</span>
+          <h3>Linux Practice</h3>
           <p>Linux commands, sudo, networking, package management, users, permissions, shell scripting, cron jobs, and task automation.</p>
         </div>
 
         <div class="journey-card">
-          <span class="repo-number">04</span>
-          <h3>AWS-Cloud</h3>
+          <span class="journey-step">04</span>
+          <h3>AWS Cloud</h3>
           <p>Cloud concepts, AWS setup, IAM, EC2, S3, VPC, Lambda, SQS/SNS, CloudWatch, and CloudFormation.</p>
         </div>
 
         <div class="journey-card">
-          <span class="repo-number">05</span>
-          <h3>Docker-Containerization</h3>
-          <p>Docker, Dockerfile, Docker Compose, containers vs VMs, and hands-on containerization examples.</p>
+          <span class="journey-step">05</span>
+          <h3>Containerization</h3>
+          <p>Docker, Dockerfile, Docker Compose, containers vs virtual machines, and practical container workflows.</p>
         </div>
 
         <div class="journey-card">
-          <span class="repo-number">06</span>
-          <h3>CI-CD-Jenkins</h3>
-          <p>Jenkins, Maven, CI/CD pipelines, GitHub and Docker integration, testing workflows, and deployment basics.</p>
+          <span class="journey-step">06</span>
+          <h3>CI/CD with Jenkins</h3>
+          <p>Jenkins, Maven, CI/CD pipelines, GitHub integration, Docker integration, testing workflows, and deployment basics.</p>
         </div>
 
         <div class="journey-card">
-          <span class="repo-number">07</span>
-          <h3>Monitoring-DevOps</h3>
-          <p>Prometheus, Grafana, monitoring dashboards, alerts, observability concepts, and best practices.</p>
+          <span class="journey-step">07</span>
+          <h3>Monitoring & Observability</h3>
+          <p>Prometheus, Grafana, dashboards, alerts, observability concepts, and monitoring best practices.</p>
         </div>
 
         <div class="journey-card">
-          <span class="repo-number">08</span>
+          <span class="journey-step">08</span>
           <h3>Kubernetes</h3>
           <p>Kubernetes setup, pods, deployments, YAML, services, microservices architecture, and cloud Kubernetes basics.</p>
         </div>
 
         <div class="journey-card">
-          <span class="repo-number">09</span>
-          <h3>Prompt-Engineering</h3>
-          <p>Prompt engineering concepts, hands-on experiments, reusable prompt templates, and best practices for AI workflows.</p>
+          <span class="journey-step">09</span>
+          <h3>AI & Prompt Practice</h3>
+          <p>Prompt engineering concepts, hands-on AI experiments, reusable prompts, and best practices for structured workflows.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED PROJECTS -->
+  <!-- WORK -->
   <section id="projects" class="section">
     <div class="container">
       <div class="section-heading center">
-        <p class="section-label">Featured Projects</p>
-        <h2>Cloud portfolio highlights</h2>
+        <p class="section-label">Selected Work</p>
+        <h2>Interactive highlights from my cloud and DevOps work.</h2>
       </div>
 
-      <div class="projects-grid">
+      <div class="work-grid">
 
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge">AWS • S3</span>
+        <article class="work-card">
+          <div class="work-top">
+            <span class="work-badge">AWS • S3</span>
             <h3>AWS Static Website Hosting</h3>
             <p>
-              Portfolio website hosted on Amazon S3 with static website hosting,
-              public access configuration, and cloud portfolio deployment practice.
+              Personal website deployed with Amazon S3 static website hosting,
+              access configuration, and deployment workflow practice.
             </p>
           </div>
 
-          <div class="project-images">
-            <img src="assets/screenshots/s3_bucket/bucket_properties.png" alt="Bucket Properties" onclick="openImage(this.src)">
-            <img src="assets/screenshots/s3_bucket/bucket_policy.png" alt="Bucket Policy" onclick="openImage(this.src)">
-            <img src="assets/screenshots/s3_bucket/bucket_logging.png" alt="Bucket Logging" onclick="openImage(this.src)">
+          <div class="work-tags">
+            <span>AWS S3</span>
+            <span>Static Hosting</span>
+            <span>IAM</span>
           </div>
 
-          <div class="project-links">
-            <a href="http://shariqua-portfolio.s3-website.eu-west-2.amazonaws.com" target="_blank" class="btn btn-small">
-              View S3 Site
-            </a>
+          <div class="work-actions">
+            <a href="http://shariqua-portfolio.s3-website.eu-west-2.amazonaws.com" target="_blank" class="btn btn-small">Live Site</a>
+            <button class="btn btn-ghost" type="button" onclick="toggleDetails('work1')">View Details</button>
           </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge">Logs • Monitoring</span>
+          <div class="work-details" id="work1">
+            <ul>
+              <li>Configured static website hosting for the bucket.</li>
+              <li>Managed public access and policy setup for website delivery.</li>
+              <li>Used the deployment as a hands-on cloud hosting exercise.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-top">
+            <span class="work-badge">Logs • Analysis</span>
             <h3>Access Logging Setup</h3>
             <p>
-              Server access logging setup for request visibility, monitoring support,
-              and analysis of traffic behavior across the hosting workflow.
+              Logging configuration designed to support request visibility,
+              traffic review, and operational understanding of hosted content.
             </p>
           </div>
 
-          <div class="project-images">
-            <img src="assets/screenshots/cloudfront/general_tab.png" alt="CloudFront General Tab" onclick="openImage(this.src)">
-            <img src="assets/screenshots/cloudfront/behaviors_tab.png" alt="CloudFront Behaviors Tab" onclick="openImage(this.src)">
+          <div class="work-tags">
+            <span>Logging</span>
+            <span>Monitoring</span>
+            <span>Traffic Review</span>
           </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge">CDN • HTTPS</span>
-            <h3>CloudFront CDN Delivery</h3>
+          <div class="work-actions">
+            <button class="btn btn-ghost" type="button" onclick="toggleDetails('work2')">View Details</button>
+          </div>
+
+          <div class="work-details" id="work2">
+            <ul>
+              <li>Explored how logs support visibility into hosted requests.</li>
+              <li>Connected logging with monitoring and review workflows.</li>
+              <li>Used this setup to better understand operational tracking.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-top">
+            <span class="work-badge">CDN • HTTPS</span>
+            <h3>CloudFront Delivery</h3>
             <p>
-              CloudFront distribution configured for faster global delivery,
-              improved content access, and secure website delivery workflow.
+              Content delivery setup focused on faster access, broader reach,
+              and secure website distribution through CloudFront.
             </p>
           </div>
 
-          <div class="project-images">
-            <img src="assets/screenshots/cloudfront/general_tab.png" alt="CloudFront Overview" onclick="openImage(this.src)">
-            <img src="assets/screenshots/cloudfront/behaviors_tab.png" alt="CloudFront Behaviors" onclick="openImage(this.src)">
+          <div class="work-tags">
+            <span>CloudFront</span>
+            <span>CDN</span>
+            <span>HTTPS</span>
           </div>
 
-          <div class="project-links">
-            <a href="https://d1pnevotalkm9w.cloudfront.net" target="_blank" class="btn btn-small">
-              View CloudFront Site
-            </a>
+          <div class="work-actions">
+            <a href="https://d1pnevotalkm9w.cloudfront.net" target="_blank" class="btn btn-small">Open Site</a>
+            <button class="btn btn-ghost" type="button" onclick="toggleDetails('work3')">View Details</button>
           </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge">Preview • Deployment</span>
-            <h3>Website Preview Comparison</h3>
+          <div class="work-details" id="work3">
+            <ul>
+              <li>Improved delivery approach with CDN-based distribution.</li>
+              <li>Focused on faster access and cleaner website presentation.</li>
+              <li>Compared delivery outcome with direct S3 website hosting.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-top">
+            <span class="work-badge">Deployment • Comparison</span>
+            <h3>Hosting Outcome Review</h3>
             <p>
-              Homepage preview comparison between direct S3 website hosting and
-              CloudFront delivery URL to observe deployment outcome.
+              Reviewed deployment results across direct website hosting and CDN
+              delivery to understand differences in access and presentation.
             </p>
           </div>
 
-          <div class="project-images">
-            <img src="assets/screenshots/website/s3_url_homepage.png" alt="S3 Homepage Preview" onclick="openImage(this.src)">
-            <img src="assets/screenshots/website/cloudfront_url_homepage.png" alt="CloudFront Homepage Preview" onclick="openImage(this.src)">
+          <div class="work-tags">
+            <span>Deployment</span>
+            <span>Comparison</span>
+            <span>Cloud Workflow</span>
           </div>
-        </div>
 
+          <div class="work-actions">
+            <button class="btn btn-ghost" type="button" onclick="toggleDetails('work4')">View Details</button>
+          </div>
+
+          <div class="work-details" id="work4">
+            <ul>
+              <li>Compared direct hosting and CDN-based delivery paths.</li>
+              <li>Observed presentation and access differences.</li>
+              <li>Used the outcome to improve website structure and hosting flow.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOGS / VIDEOS -->
+  <section id="blogs" class="section">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="section-label">Blogs & Videos</p>
+        <h2>A place for tutorials, notes, demos, and future uploads.</h2>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card featured-blog">
+          <div class="blog-media placeholder-video">
+            <i class="fa-solid fa-play"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-type">Video Slot</span>
+            <h3>Cloud walkthroughs and technical demos</h3>
+            <p>Add your future project demos, screen recordings, or learning videos here.</p>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-media placeholder-card">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-type">Blog Slot</span>
+            <h3>AWS and DevOps write-ups</h3>
+            <p>Use this section for implementation notes, deployment stories, and lessons learned.</p>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-media placeholder-card">
+            <i class="fa-solid fa-video"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-type">Media Slot</span>
+            <h3>Learning updates and mini explainers</h3>
+            <p>Add short clips, reels, or topic-based explanations when you are ready.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -282,13 +355,13 @@
     <div class="container">
       <div class="section-heading center">
         <p class="section-label">Contact</p>
-        <h2>Let’s connect</h2>
+        <h2>Let’s connect.</h2>
       </div>
 
       <div class="contact-card">
         <p class="contact-text">
-          You can reach me through the following platforms for portfolio viewing,
-          networking, and professional connection.
+          You can reach me through the following platforms for networking,
+          collaboration, and professional connection.
         </p>
 
         <div class="social-links">
@@ -314,24 +387,14 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Shariqua Patel Farooque | AWS DevOps Portfolio</p>
+    <p>© 2026 Shariqua Patel Farooque</p>
   </footer>
 
-  <!-- IMAGE VIEWER -->
-  <div id="imageViewer" class="image-viewer" onclick="closeImage()">
-    <img id="viewerImg" alt="Preview">
-  </div>
-
   <script>
-    function openImage(src) {
-      document.getElementById("imageViewer").style.display = "flex";
-      document.getElementById("viewerImg").src = src;
-    }
-
-    function closeImage() {
-      document.getElementById("imageViewer").style.display = "none";
+    function toggleDetails(id) {
+      const panel = document.getElementById(id);
+      panel.classList.toggle("show");
     }
   </script>
 </body>

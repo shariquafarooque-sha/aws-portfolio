@@ -88,11 +88,11 @@ Portfolio website hosted on Amazon S3 with static website hosting, public access
 
 <div class="project-images">
 
-<img src="assets/screenshots/s3_bucket/bucket_properties.png">
+<img src="assets/screenshots/s3_bucket/bucket_properties.png" alt="Bucket Properties" onclick="openImage(this.src)">
 
-<img src="assets/screenshots/s3_bucket/bucket_policy.png">
+<img src="assets/screenshots/s3_bucket/bucket_policy.png" alt="Bucket Policy" onclick="openImage(this.src)">
 
-<img src="assets/screenshots/s3_bucket/bucket_logging.png">
+<img src="assets/screenshots/s3_bucket/bucket_logging.png" alt="Bucket Logging" onclick="openImage(this.src)">
 
 </div>
 
@@ -114,9 +114,9 @@ Server access logs capture visitor requests for monitoring and analysis.
 
 <div class="project-images">
 
-<img src="assets/screenshots/s3_logs/logs_list.png">
+<img src="assets/screenshots/cloudfront/general_tab.png" onclick="openImage(this.src)">
 
-<img src="assets/screenshots/s3_logs/log_file_details.png">
+<img src="assets/screenshots/cloudfront/behaviors_tab.png" onclick="openImage(this.src)">
 
 </div>
 
@@ -204,6 +204,22 @@ Homepage preview from S3 and CloudFront URLs.
 <p>© 2026 Shariqua Patel Farooque | AWS DevOps Portfolio</p>
 
 </footer>
+<!-- IMAGE VIEWER -->
+<div id="imageViewer" class="image-viewer" onclick="closeImage()">
+  <img id="viewerImg">
+</div>
 
+<script>
+
+function openImage(src){
+  document.getElementById("imageViewer").style.display="flex";
+  document.getElementById("viewerImg").src = src;
+}
+
+function closeImage(){
+  document.getElementById("imageViewer").style.display="none";
+}
+
+</script>
 </body>
 </html>

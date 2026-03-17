@@ -56,11 +56,10 @@ color:#C9A27C;
 
 .hero-content p{
 font-size:20px;
-color:#E6C7A3;   /* brighter gold */
+color:#C9A27C;   /* SAME color as the name */
 margin-bottom:30px;
 letter-spacing:2px;
 font-weight:500;
-text-shadow:0 2px 8px rgba(0,0,0,0.6);
 }
 
 

@@ -1,59 +1,96 @@
 const galleries = {
   website: [
     {
-      src: "assets/screenshots/website/s3_url_homepage.png",
-      title: "S3 Website URL",
-      desc: "Static website opened directly from the Amazon S3 website endpoint."
+      src: "assets/screenshots/aws-static-portfolio/website/s3_live.png",
+      title: "S3 Live Website Output",
+      desc: "Static portfolio website opened directly from the Amazon S3 website endpoint."
     },
     {
-      src: "assets/screenshots/website/cloudfront_url_homepage.png",
-      title: "CloudFront Website URL",
-      desc: "Portfolio website delivered through CloudFront distribution for content delivery."
+      src: "assets/screenshots/aws-static-portfolio/website/cloudfront_live.png",
+      title: "CloudFront Live Website Output",
+      desc: "Portfolio website delivered through CloudFront distribution."
     }
   ],
 
   s3_bucket: [
     {
-      src: "assets/screenshots/s3_bucket/bucket_properties.png",
-      title: "Bucket Properties",
-      desc: "Amazon S3 bucket configuration and general setup view."
+      src: "assets/screenshots/aws-static-portfolio/s3_bucket/s3_static_hosting.png",
+      title: "S3 Static Website Hosting",
+      desc: "S3 bucket configured for static website hosting."
     },
     {
-      src: "assets/screenshots/s3_bucket/bucket_policy.png",
-      title: "Bucket Policy",
-      desc: "S3 bucket policy used for object access and website visibility."
+      src: "assets/screenshots/aws-static-portfolio/s3_bucket/s3_bucket_policy.png",
+      title: "S3 Bucket Policy",
+      desc: "Bucket policy used for public object access."
     },
     {
-      src: "assets/screenshots/s3_bucket/bucket_logging.png",
-      title: "Bucket Logging",
-      desc: "Logging-related configuration for S3 bucket observation."
+      src: "assets/screenshots/aws-static-portfolio/s3_bucket/s3_bucket_logging.png",
+      title: "S3 Bucket Logging",
+      desc: "Logging-related bucket configuration."
+    },
+    {
+      src: "assets/screenshots/aws-static-portfolio/s3_bucket/s3_objects.png",
+      title: "S3 Uploaded Objects",
+      desc: "Uploaded website files and related objects inside the bucket."
     }
   ],
 
   cloudfront: [
     {
-      src: "assets/screenshots/cloudfront/general_tab.png",
-      title: "CloudFront General Tab",
-      desc: "General distribution configuration for CloudFront delivery."
+      src: "assets/screenshots/aws-static-portfolio/cloudfront/cloudfront_distribution.png",
+      title: "CloudFront Distribution",
+      desc: "Main CloudFront distribution configuration."
     },
     {
-      src: "assets/screenshots/cloudfront/behaviors_tab.png",
-      title: "CloudFront Behaviors Tab",
-      desc: "Behaviour rules and request handling settings in CloudFront."
+      src: "assets/screenshots/aws-static-portfolio/cloudfront/cloudfront_behaviors.png",
+      title: "CloudFront Behaviors",
+      desc: "Behavior settings for request handling and delivery."
+    },
+    {
+      src: "assets/screenshots/aws-static-portfolio/cloudfront/cloudfront_invalidation.png",
+      title: "CloudFront Invalidation",
+      desc: "Cache invalidation used to reflect updated deployment changes."
     }
   ],
 
-  // ✅ FIXED: separate s3_logs section
-  s3_logs: [
+  workflow: [
     {
-      src: "assets/screenshots/s3_logs/logs_list.png",
-      title: "Logs List",
-      desc: "List view of stored S3 access log files."
+      src: "assets/screenshots/aws-static-portfolio/workflow/git_push.png",
+      title: "Git Push",
+      desc: "Local code changes pushed from Git to GitHub."
     },
     {
-      src: "assets/screenshots/s3_logs/log_file_details.png",
+      src: "assets/screenshots/aws-static-portfolio/workflow/github_actions_success.png",
+      title: "GitHub Actions Success",
+      desc: "Successful GitHub Actions workflow run after deployment."
+    },
+    {
+      src: "assets/screenshots/aws-static-portfolio/workflow/github_actions_yaml.png",
+      title: "GitHub Actions YAML",
+      desc: "Workflow YAML configuration used for deployment automation."
+    },
+    {
+      src: "assets/screenshots/aws-static-portfolio/workflow/github_secrets.png",
+      title: "GitHub Secrets",
+      desc: "Repository secrets used to securely store AWS deployment credentials."
+    },
+    {
+      src: "assets/screenshots/aws-static-portfolio/workflow/iam_user_permissions.png",
+      title: "IAM User Permissions",
+      desc: "IAM permissions configured for deployment-related access."
+    }
+  ],
+
+  s3_logs: [
+    {
+      src: "assets/screenshots/aws-static-portfolio/s3_logs/logs_list.png",
+      title: "S3 Logs List",
+      desc: "List view of stored log files in the S3 logs folder."
+    },
+    {
+      src: "assets/screenshots/aws-static-portfolio/s3_logs/log_file_details.png",
       title: "Log File Details",
-      desc: "Detailed view of an S3 access log file."
+      desc: "Detailed view of an S3 log file object."
     }
   ]
 };
@@ -89,7 +126,7 @@ function renderThumbs() {
 
   currentGallery.forEach((item, index) => {
     const thumb = document.createElement("div");
-    thumb.className = "thumb";
+    thumb.className = `thumb ${index === currentIndex ? "active" : ""}`;
     thumb.innerHTML = `
       <img src="${item.src}" alt="${item.title}">
       <p>${item.title}</p>
@@ -105,49 +142,64 @@ function renderThumbs() {
 }
 
 function openGallery(galleryName) {
-  currentGallery = galleries[galleryName] || [];
+  const selectedGallery = galleries[galleryName];
+
+  if (!selectedGallery || !selectedGallery.length) {
+    alert("Gallery not available yet.");
+    return;
+  }
+
+  currentGallery = selectedGallery;
   currentIndex = 0;
-
-  if (!currentGallery.length) return;
-
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
   renderGalleryItem(currentIndex);
 }
 
 function closeGallery() {
+  if (!modal) return;
   modal.classList.remove("active");
   document.body.style.overflow = "";
 }
 
-galleryButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const galleryName = button.getAttribute("data-gallery");
-    openGallery(galleryName);
+if (galleryButtons.length) {
+  galleryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const galleryName = button.getAttribute("data-gallery");
+      openGallery(galleryName);
+    });
   });
-});
+}
 
-prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-  renderGalleryItem(currentIndex);
-});
+if (prevBtn) {
+  prevBtn.addEventListener("click", () => {
+    if (!currentGallery.length) return;
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    renderGalleryItem(currentIndex);
+  });
+}
 
-nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % currentGallery.length;
-  renderGalleryItem(currentIndex);
-});
+if (nextBtn) {
+  nextBtn.addEventListener("click", () => {
+    if (!currentGallery.length) return;
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    renderGalleryItem(currentIndex);
+  });
+}
 
-closeBtn.addEventListener("click", closeGallery);
-overlay.addEventListener("click", closeGallery);
+if (closeBtn) closeBtn.addEventListener("click", closeGallery);
+if (overlay) overlay.addEventListener("click", closeGallery);
 
 document.addEventListener("keydown", (e) => {
-  if (!modal.classList.contains("active")) return;
+  if (!modal || !modal.classList.contains("active")) return;
 
   if (e.key === "Escape") closeGallery();
+
   if (e.key === "ArrowRight") {
     currentIndex = (currentIndex + 1) % currentGallery.length;
     renderGalleryItem(currentIndex);
   }
+
   if (e.key === "ArrowLeft") {
     currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
     renderGalleryItem(currentIndex);

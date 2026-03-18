@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screenshots | Shariqua Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">Shariqua <span>Portfolio</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="screenshots.html">Screenshots</a>
+        <a href="documentation.html">Documentation</a>
+        <a href="videos.html">Videos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="container">
+        <p class="section-label">Screenshots</p>
+        <h1 class="page-title">Organized screenshot folders with dedicated topic-based galleries.</h1>
+        <p class="page-subtext">
+          Click any folder card to open screenshots for that topic with one-line descriptions.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="folder-grid">
+          <button class="folder-card folder-button gallery-btn" data-gallery="s3_bucket">
+            <div class="folder-icon">📂</div>
+            <h3>S3 Bucket</h3>
+            <p>Static hosting, bucket policy, logging, and uploaded objects.</p>
+          </button>
+
+          <button class="folder-card folder-button gallery-btn" data-gallery="cloudfront">
+            <div class="folder-icon">📂</div>
+            <h3>CloudFront</h3>
+            <p>Distribution setup, behaviors, and invalidation screenshots.</p>
+          </button>
+
+          <button class="folder-card folder-button gallery-btn" data-gallery="workflow">
+            <div class="folder-icon">📂</div>
+            <h3>Workflow</h3>
+            <p>Git push, GitHub Actions, secrets, YAML, and IAM-related proof.</p>
+          </button>
+
+          <button class="folder-card folder-button gallery-btn" data-gallery="website">
+            <div class="folder-icon">📂</div>
+            <h3>Website Output</h3>
+            <p>S3 endpoint output and CloudFront live website delivery screenshots.</p>
+          </button>
+
+          <button class="folder-card folder-button gallery-btn" data-gallery="s3_logs">
+            <div class="folder-icon">📂</div>
+            <h3>S3 Logs</h3>
+            <p>Log list and log file details from S3 logging proof.</p>
+          </button>
+
+          <div class="folder-card">
+            <div class="folder-icon">📁</div>
+            <h3>Future Projects</h3>
+            <p>This section will grow with Docker, Linux, and future DevOps screenshot folders.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Contact</p>
+          <h2>Open to opportunities, collaboration, and technical growth.</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Let’s connect</h3>
+            <p>
+              This screenshot section is part of my structured project proof and learning portfolio.
+            </p>
+            <div class="contact-info">
+              <p><strong>Email:</strong> shariquafarooque@gmail.com</p>
+              <p><strong>Location:</strong> United Kingdom</p>
+            </div>
+            <div class="quick-links">
+              <a href="https://github.com/shariquafarooque-sha" target="_blank">GitHub</a>
+              <a href="https://www.linkedin.com/in/shariqua-patel-28464a263" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3>Explore more</h3>
+            <div class="quick-links">
+              <a href="projects.html">Projects</a>
+              <a href="documentation.html">Documentation</a>
+              <a href="videos.html">Videos</a>
+              <a href="assets/documents/Shariqua_Patel_CV.pdf" target="_blank">Open CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="gallery-modal" id="galleryModal">
+    <div class="gallery-overlay" id="galleryOverlay"></div>
+
+    <div class="gallery-content">
+      <button class="gallery-close" id="galleryClose">&times;</button>
+
+      <div class="gallery-main">
+        <img id="galleryImage" src="" alt="Project screenshot">
+      </div>
+
+      <div class="gallery-caption">
+        <h3 id="galleryTitle">Screenshot Title</h3>
+        <p id="galleryDesc">Screenshot description</p>
+      </div>
+
+      <div class="gallery-controls">
+        <button id="prevBtn" class="btn btn-outline">Previous</button>
+        <button id="nextBtn" class="btn btn-outline">Next</button>
+      </div>
+
+      <div class="gallery-thumbs" id="galleryThumbs"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
